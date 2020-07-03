@@ -11,8 +11,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
-
 /*
  * This is the main Spring Boot application class. It configures Spring Boot, JPA, Swagger
  */
@@ -25,7 +23,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class Application extends SpringBootServletInitializer {
 
     private static final Class<Application> applicationClass = Application.class;
-    private static final Logger log = LoggerFactory.getLogger(applicationClass);
+    
+    @SuppressWarnings("unused")
+	private static final Logger log = LoggerFactory.getLogger(applicationClass);
 
 	public static void main(String[] args) {
 		SpringApplication.run(applicationClass, args);
